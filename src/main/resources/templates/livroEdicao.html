@@ -8,8 +8,9 @@
     <div th:replace="~{fragments/header.html :: header}"></div>
 
     <div>
-        <form method="post" th:action="@{cadastrar}" th:object="${livroRequest}">
-            <h2>Cadastro de livro</h2>
+        <form method="post" th:action="@{/livro/editar/{id}(id=${idLivro})}" th:object="${livro}">
+            <h2>Edição de livro</h2>
+            <input type="hidden" th:field="${idLivro}">
             <br>
             <table>
                 <tr>
@@ -40,7 +41,7 @@
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <input type="submit" value="Cadastrar">
+                        <input type="submit" value="Atualizar">
                     </td>
                 </tr>
             </table>
