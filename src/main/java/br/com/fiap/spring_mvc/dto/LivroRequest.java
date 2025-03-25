@@ -7,7 +7,7 @@ import lombok.Data;
 import java.math.BigDecimal;
 
 @Data
-public class LivroRequest{
+public class LivroRequest {
         @NotBlank(message = "{titulo.not.blank}")
         private String titulo;
         @NotBlank(message = "{autor.not.blank}")
@@ -19,6 +19,4 @@ public class LivroRequest{
         private BigDecimal preco;
         @Pattern(regexp = "^970\\d{7}$|^970\\d{10}$", message = "{isbn.pattern}")
         private String isbn;
-
-
 }
